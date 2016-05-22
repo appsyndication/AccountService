@@ -1,0 +1,17 @@
+﻿@model AppSyndication.AccountService.Web.Models.AccountViewModel
+@{
+    ViewData["Title"] = @Model.Username;
+    ViewData["NavPosition"] = "Account";
+}
+
+<div class="row">
+    <div class="col-sm-3">
+        @Html.Partial("_AccountNavigation")
+    </div>
+    <div class="col-sm-9">
+        <h1 class="section-title-2">Show cool account information here</h1>
+        <div>
+            <p>Details go here.</p>
+        </div>
+    </div>
+</div>

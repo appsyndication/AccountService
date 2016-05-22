@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Welcome Aboard!";
+    ViewBag.Subtitle = "Let's go do awesome things together.";
+}
+
+<div class="row mt25">
+    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        <h2 class="section-title-2 st-2 mb0">@ViewBag.Title</h2>
+        <p><small>@ViewBag.Subtitle</small></p>
+        <p>
+            <i class="fa fa-user"></i> Click <a asp-controller="Account" asp-action="Index">here</a> to sign in to your account.
+        </p>
+        <p>
+            <i class="fa fa-life-ring"></i> Click <a href="http://www.appsyndication.com/support">here</a> for support options.
+        </p>
+    </div>
+</div>

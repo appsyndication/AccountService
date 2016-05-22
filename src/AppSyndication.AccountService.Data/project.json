@@ -1,0 +1,16 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "AppSyndication.AccountService.Data Class Library",
+  "authors": [ "Rob Mensching" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "FireGiant.MembershipReboot.AzureStorage": "0.0.1-build4"
+  },
+
+  "frameworks": {
+    "net451": { }
+  }
+}

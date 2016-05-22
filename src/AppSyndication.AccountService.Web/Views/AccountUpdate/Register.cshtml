@@ -1,0 +1,26 @@
+﻿@model AppSyndication.AccountService.Web.Models.ChangeEmailUsingResetKey
+@{
+    ViewBag.Title = "Register Account";
+    ViewBag.Subtitle = "Please provide a password for your account.";
+}
+
+<div class="row mt25">
+    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        <form role="form" method="post">
+            @Html.AntiForgeryToken()
+
+            <fieldset>
+                <legend>@ViewBag.Title</legend>
+                <p class="sublegend">@ViewBag.Subtitle</p>
+
+                <div error-summary="@ViewData.ModelState"></div>
+
+                @Html.EditorForModel()
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

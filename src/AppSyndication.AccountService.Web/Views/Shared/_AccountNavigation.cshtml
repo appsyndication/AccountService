@@ -1,0 +1,12 @@
+﻿@{
+    var accountClass = ViewData["NavPosition"] == "Account" ? "active" : null;
+    var profileClass = ViewData["NavPosition"] == "Profile" ? "active" : null;
+    var channelsClass = ViewData["NavPosition"] == "Channels" ? "active" : null;
+}
+<div class="list-group">
+    <a asp-controller="Account" asp-action="Index" class="list-group-item text-nowrap @accountClass"><strong>@User.Name()</strong></a>
+    <a asp-controller="Account" asp-action="Profile" class="list-group-item text-nowrap @profileClass"><i class="fa fa-user fa-fw"></i> Update profile</a>
+    <a asp-controller="AccountChannels" asp-action="Index" class="list-group-item text-nowrap @channelsClass"><i class="fa fa-rss-square fa-fw"></i> Manage channels</a>
+    <a asp-controller="AccountUpdate" asp-action="Reset" class="list-group-item text-nowrap"><i class="fa fa-lock fa-fw"></i> Change password</a>
+    <a href="http://www.appsyndication.com/support/" class="list-group-item text-nowrap"><i class="fa fa-life-ring fa-fw"></i> Get help</a>
+</div>

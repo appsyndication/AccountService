@@ -1,0 +1,27 @@
+﻿@model AppSyndication.AccountService.Web.Models.ChangeEmailUsingResetKey
+@{
+    ViewBag.Title = "Change Email";
+    ViewBag.Subtitle = "Provide your password to complete your email change.";
+}
+
+<div class="row mt25">
+    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        <form role="form" method="post">
+            @Html.AntiForgeryToken()
+
+            <fieldset>
+                <legend>@ViewBag.Title</legend>
+                <p class="sublegend">@ViewBag.Subtitle</p>
+
+                <div error-summary="@ViewData.ModelState"></div>
+
+                @Html.EditorForModel()
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <a asp-action="Cancel" asp-route-id="@Model.Key" class="btn btn-default">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
